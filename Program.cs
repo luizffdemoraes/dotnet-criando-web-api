@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("FilmesConnection");
+var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
 
-builder.Services.AddDbContext<FilmesContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect (connectionString)));
+builder.Services.AddDbContext<FilmeContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect (connectionString)));
 
 // Completo
 // builder.Services.AddDbContext<FilmesContext>(opts => opts.UseMySql(builder.Configuration.GetConnectionString("FilmesConnection"), ServerVersion.AutoDetect));
